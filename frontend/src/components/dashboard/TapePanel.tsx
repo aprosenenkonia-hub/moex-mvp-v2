@@ -1,0 +1,2 @@
+const trades=[{time:"10:01:01",price:284.9,volume:120},{time:"10:01:04",price:285.1,volume:80},{time:"10:01:07",price:285.2,volume:210}];
+export default function TapePanel(){return <div className="bg-slate-900 rounded-xl p-4 border border-slate-800"><h3 className="text-slate-400 mb-4">Time & Sales</h3><div className="space-y-2 text-sm">{trades.map((t,i)=><div key={i} className="grid grid-cols-3 gap-2"><span>{t.time}</span><span>{t.price}</span><span>{t.volume}</span></div>)}</div></div>}

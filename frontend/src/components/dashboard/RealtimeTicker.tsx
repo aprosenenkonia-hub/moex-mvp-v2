@@ -1,0 +1,2 @@
+"use client"; import { useWebSocket } from "@/hooks/useWebSocket";
+export default function RealtimeTicker(){const quote=useWebSocket(); return <div className="bg-slate-900 p-4 rounded-xl border border-slate-800"><div className="text-slate-400">Realtime Quote</div><div className="text-2xl mt-2">{quote?.data?.symbol??"—"} {quote?.data?.price??""}</div><div className="text-xs text-slate-500 mt-1">{quote?.data?.ts??"waiting for stream"}</div></div>}

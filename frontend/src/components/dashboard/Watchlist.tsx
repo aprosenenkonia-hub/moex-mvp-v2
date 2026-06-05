@@ -1,0 +1,2 @@
+import Link from "next/link"; const symbols=["SBER","GAZP","LKOH","ROSN","Si","RTS"];
+export default function Watchlist(){return <div className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden"><div className="p-4 font-semibold border-b border-slate-800">Watchlist</div>{symbols.map(s=><Link key={s} href={`/instrument/${s}`} className="block px-4 py-3 border-b border-slate-800 hover:bg-slate-800"><div className="flex justify-between"><span>{s}</span><span className="text-green-400">+0.42%</span></div></Link>)}</div>}

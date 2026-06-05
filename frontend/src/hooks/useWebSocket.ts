@@ -1,0 +1,2 @@
+"use client"; import { useEffect,useState } from "react"; import type { QuoteMessage } from "@/types/market"; const WS_URL=process.env.NEXT_PUBLIC_WS_URL||"ws://localhost/ws";
+export function useWebSocket(){const [quote,setQuote]=useState<QuoteMessage|null>(null); useEffect(()=>{const ws=new WebSocket(WS_URL); ws.onmessage=(e)=>{try{setQuote(JSON.parse(e.data))}catch{}}; return()=>ws.close()},[]); return quote;}

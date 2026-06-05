@@ -1,0 +1,1 @@
+export default function SignalsPanel(){return <div className="bg-slate-900 rounded-xl p-4 border border-slate-800"><h3 className="text-slate-400">Signals</h3><ul className="mt-4 space-y-2"><li className="text-green-400">BUY SBER — Delta ↑</li><li className="text-green-400">BUY Si — OI ↑</li><li className="text-slate-400">WAIT GAZP</li></ul></div>}

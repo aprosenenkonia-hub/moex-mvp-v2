@@ -1,0 +1,2 @@
+import Link from "next/link"; const links=[{href:"/dashboard",label:"Dashboard"},{href:"/instrument/SBER",label:"SBER"},{href:"/instrument/GAZP",label:"GAZP"},{href:"/instrument/Si",label:"Si Futures"}];
+export default function Sidebar(){return <aside className="w-64 min-h-screen bg-slate-950 border-r border-slate-800"><div className="p-6 text-xl font-bold">MOEX Flow</div><nav className="flex flex-col p-4 gap-2">{links.map(l=><Link key={l.href} href={l.href} className="rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-900 hover:text-white">{l.label}</Link>)}</nav></aside>}

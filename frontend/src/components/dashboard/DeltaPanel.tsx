@@ -1,0 +1,2 @@
+"use client"; import { useEffect,useState } from "react"; import { getDelta } from "@/services/market"; import type { Delta } from "@/types/market";
+export default function DeltaPanel({symbol="SBER"}:{symbol?:string}){const [data,setData]=useState<Delta|null>(null); useEffect(()=>{getDelta(symbol).then(setData).catch(()=>setData(null))},[symbol]); return <div className="bg-slate-900 rounded-xl p-4 border border-slate-800"><h3 className="text-slate-400">Cum Delta</h3><div className="mt-4 text-3xl font-bold text-green-400">{data?`+${data.delta}`:"—"}</div></div>}
